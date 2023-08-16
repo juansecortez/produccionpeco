@@ -1,0 +1,161 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  border-radius: 50px;
+}
+.turno {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: rgb(55, 94, 165);
+}
+
+.turno h1 {
+  color: rgb(211, 53, 5);
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.turno img {
+  width: 50px;
+  float: left;
+  margin-right: 15px;
+}
+
+.turno h2,
+.turno h3 {
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  .turno img {
+    width: 40px;
+  }
+  .turno h1 {
+    font-size: 1.5rem;
+  }
+}
+body {
+  background-image: url("https://i.ibb.co/JzRpg7z/peco.png");
+  background-size: cover; /* Ajusta la imagen para cubrir todo el espacio disponible */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+.date-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.date-selection label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.date-selection input {
+  width: 200px; /* Ancho fijo */
+  padding: 12px; /* Aumento del relleno */
+  border-radius: 20px; /* Bordes muy redondeados */
+  border: 2px solid rgb(55, 94, 165); /* Borde del mismo color que otros elementos */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave de colores */
+  outline: none; /* Sin contorno al enfocar */
+}
+
+.date-selection input:focus {
+  border-color: rgb(211, 53, 5); /* Cambio de color de borde al enfocar */
+  box-shadow: 0px 0px 10px rgba(211, 53, 5, 0.3); /* Sombra suave cuando está enfocado */
+}
+
+.date-selection input::placeholder {
+  /* Estilo para el texto del marcador de posición */
+  color: rgba(55, 94, 165, 0.5);
+}
+
+.date-selection input:focus {
+  box-shadow: 0px 0px 10px rgba(55, 94, 165, 0.5); /* Sombra suave cuando está enfocado */
+}
+
+.turnos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.turno {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.turno h1 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.turno ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.turno li {
+  font-size: 20px; /* Cambia esto para ajustar el tamaño */
+  color: #555;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.turno h2 {
+  font-size: 18px;
+  color: #444;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 70px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+
+  .turno h1 {
+    font-size: 18px;
+  }
+
+  .turno h2 {
+    font-size: 16px;
+  }
+
+  .turno h3 {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,41 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+
+<div class="background">
+  <div class="container">
+    <div class="card">
+      <h5 class="center-text">Producción Peco</h5>
+      <div class="logo"></div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="username">Ingresa Usuario</label>
+          <input
+            id="username"
+            type="text"
+            formControlName="username"
+            class="input-field"
+          />
+        </div>
+        <div>
+          <label for="password">Ingresa Contraseña</label>
+          <div class="password-wrapper">
+            <input
+              id="password"
+              [type]="showPassword ? 'text' : 'password'"
+              formControlName="password"
+              class="input-field"
+            />
+            <i
+              class="eye-icon fas fa-eye"
+              (click)="handleClickShowPassword()"
+              (mousedown)="handleMouseDownPassword($event)"
+            ></i>
+          </div>
+        </div>
+        <button type="submit" class="submit-button">Iniciar Sesión</button>
+      </form>
+    </div>
+  </div>
+</div>

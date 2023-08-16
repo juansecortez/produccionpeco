@@ -1,0 +1,37 @@
+<div
+  (click)="closeSidebar()"
+  class="overlay"
+  [ngClass]="{ active: isSidebarActive }"
+></div>
+<nav class="navbar">
+  <button
+    (click)="toggleSidebar()"
+    class="menu-button"
+    *ngIf="isSidebarButtonVisible"
+  >
+    &#9776;
+  </button>
+  <div class="logo-container">
+    <img
+      src="https://www.pcolorada.com/wp-content/uploads/thegem-logos/logo_a125dc4ebc4674209bb4f4ae04257b62_1x.png"
+      alt="Logo"
+      class="logo-img"
+    />
+  </div>
+  <div class="navbar-content" *ngIf="!isSidebarActive">
+    <a routerLink="/home" class="nav-link">🏠 INICIO</a>
+    <a routerLink="/produccion" class="nav-link">📈 PRODUCCIÓN</a>
+    <a routerLink="/demoras" class="nav-link">⏱️ DEMORAS POR EQUIPO</a>
+    <a routerLink="/equipos-caidos" class="nav-link">⛔ EQUIPOS CAIDOS</a>
+    <a (click)="logout()" class="logout-button">CERRAR SESIÓN</a>
+  </div>
+  <div class="sidebar" [ngClass]="{ visible: isSidebarActive }">
+    <div class="sidebar-links">
+      <a routerLink="/home" class="nav-link">🏠 INICIO</a>
+      <a routerLink="/produccion" class="nav-link">📈 PRODUCCIÓN</a>
+      <a routerLink="/demoras" class="nav-link">⏱️ DEMORAS POR EQUIPO</a>
+      <a routerLink="/equipos-caidos" class="nav-link">⛔ EQUIPOS CAIDOS</a>
+      <a (click)="logout()" class="logout-button">CERRAR SESIÓN</a>
+    </div>
+  </div>
+</nav>

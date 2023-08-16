@@ -1,0 +1,199 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="container">
+    <div class="date-selection">
+      <label for="datePicker">Selecciona una fecha:</label>
+      <input type="date" id="datePicker" (change)="onDateChange($event)" />
+    </div>
+    <div class="turnos">
+      <div class="turno" id="turno-diurno">
+        <img
+          class="logo"
+          src="https://media.licdn.com/dms/image/C560BAQHQd8sPE2_bGg/company-logo_200_200/0/1610986871592?e=2147483647&v=beta&t=BZ9EjO0FLmEfVCuCCOgO1uH1_cgsB5_kMp_vopc9NUw"
+          alt="Logo"
+        />
+        <h1>TURNO DIURNO</h1>
+        <ul>
+          <li>
+            Mov. Total: <strong>{{ T1MOVT }}</strong>
+          </li>
+          <li>
+            Mineral: <strong>{{ T1MINERAL }}</strong>
+          </li>
+          <li>
+            Esteril OP: <strong>{{ T1ESTOPE }}</strong>
+          </li>
+          <li>
+            Estéril PREP: <strong>{{ T1ESTPRE }}</strong>
+          </li>
+          <li>
+            Otros Mov.: <strong>{{ T1OTOMOV }}</strong>
+          </li>
+          <h2>Por Equipo</h2>
+          <li>
+            L5025: <strong>{{ T1L5025 }}</strong>
+          </li>
+          <li>
+            L5027: <strong>{{ T1L5027 }}</strong>
+          </li>
+          <li>
+            L5028: <strong>{{ T1L5028 }}</strong>
+          </li>
+          <li>
+            P5031: <strong>{{ T1P5031 }}</strong>
+          </li>
+          <li>
+            L5029: <strong>{{ T1P5029 }}</strong>
+          </li>
+          <li>
+            L5030: <strong>{{ T1P5030 }}</strong>
+          </li>
+          <li>
+            LEMD: <strong>{{ T1LEMD }}</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="turno" id="turno-mixto">
+        <img
+          class="logo"
+          src="https://media.licdn.com/dms/image/C560BAQHQd8sPE2_bGg/company-logo_200_200/0/1610986871592?e=2147483647&v=beta&t=BZ9EjO0FLmEfVCuCCOgO1uH1_cgsB5_kMp_vopc9NUw"
+          alt="Logo"
+        />
+        <h1>TURNO MIXTO</h1>
+        <ul>
+          <li>
+            Mov. Total: <strong>{{ T2MOVT }}</strong>
+          </li>
+          <li>
+            Mineral: <strong>{{ T2MINERAL }}</strong>
+          </li>
+          <li>
+            Estéril OP: <strong>{{ T2ESTOPE }}</strong>
+          </li>
+          <li>
+            Estéril PREP: <strong>{{ T2ESTPRE }}</strong>
+          </li>
+          <li>
+            Otros Mov.: <strong>{{ T2OTOMOV }}</strong>
+          </li>
+          <h2>Por Equipo</h2>
+          <li>
+            L5025: <strong>{{ T2L5025 }}</strong>
+          </li>
+          <li>
+            L5027: <strong>{{ T2L5027 }}</strong>
+          </li>
+          <li>
+            L5028: <strong>{{ T2L5028 }}</strong>
+          </li>
+          <li>
+            P5031: <strong>{{ T2P5031 }}</strong>
+          </li>
+          <li>
+            P5029: <strong>{{ T2P5029 }}</strong>
+          </li>
+          <li>
+            P5030: <strong>{{ T2P5030 }}</strong>
+          </li>
+          <li>
+            LEMD: <strong>{{ T2LEMD }}</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="turno" id="turno-nocturno">
+        <img
+          class="logo"
+          src="https://media.licdn.com/dms/image/C560BAQHQd8sPE2_bGg/company-logo_200_200/0/1610986871592?e=2147483647&v=beta&t=BZ9EjO0FLmEfVCuCCOgO1uH1_cgsB5_kMp_vopc9NUw"
+          alt="Logo"
+        />
+        <h1>TURNO NOCTURNO</h1>
+        <ul>
+          <li>
+            Mov. Total: <strong>{{ T3MOVT }}</strong>
+          </li>
+          <li>
+            Mineral: <strong>{{ T3MINERAL }}</strong>
+          </li>
+          <li>
+            Estéril OP: <strong>{{ T3ESTOPE }}</strong>
+          </li>
+          <li>
+            Estéril PREP: <strong>{{ T3ESTPRE }}</strong>
+          </li>
+          <li>
+            Otros Mov.: <strong>{{ T3OTOMOV }}</strong>
+          </li>
+          <h2>Por Equipo</h2>
+          <li>
+            L5025: <strong>{{ T3L5025 }}</strong>
+          </li>
+          <li>
+            L5027: <strong>{{ T3L5027 }}</strong>
+          </li>
+          <li>
+            L5028: <strong>{{ T3L5028 }}</strong>
+          </li>
+          <li>
+            P5031: <strong>{{ T3P5031 }}</strong>
+          </li>
+          <li>
+            P5029: <strong>{{ T3P5029 }}</strong>
+          </li>
+          <li>
+            P5030: <strong>{{ T3P5030 }}</strong>
+          </li>
+          <li>
+            LEMD: <strong>{{ T3LEMD }}</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="turno" id="todo-dia">
+        <img
+          class="logo"
+          src="https://media.licdn.com/dms/image/C560BAQHQd8sPE2_bGg/company-logo_200_200/0/1610986871592?e=2147483647&v=beta&t=BZ9EjO0FLmEfVCuCCOgO1uH1_cgsB5_kMp_vopc9NUw"
+          alt="Logo"
+        />
+        <h1>TODO EL DÍA</h1>
+        <ul>
+          <li>
+            Mov. Total: <strong>{{ T4MOVT }}</strong>
+          </li>
+          <li>
+            Mineral: <strong>{{ T4MINERAL }}</strong>
+          </li>
+          <li>
+            Estéril OP: <strong>{{ T4ESTOPE }}</strong>
+          </li>
+          <li>
+            Estéril PREP: <strong>{{ T4ESTPRE }}</strong>
+          </li>
+          <li>
+            Otros Mov: <strong>{{ T4OTOMOV }}</strong>
+          </li>
+          <h2>Por Equipo</h2>
+          <li>
+            L5025: <strong>{{ T4L5025 }}</strong>
+          </li>
+          <li>
+            L5027: <strong>{{ T4L5027 }}</strong>
+          </li>
+          <li>
+            L5028: <strong>{{ T4L5028 }}</strong>
+          </li>
+          <li>
+            P5031: <strong>{{ T4P5031 }}</strong>
+          </li>
+          <li>
+            P5029: <strong>{{ T4P5029 }}</strong>
+          </li>
+          <li>
+            P5030: <strong>{{ T4P5030 }}</strong>
+          </li>
+          <li>
+            LEMD: <strong>{{ T4LEMD }}</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

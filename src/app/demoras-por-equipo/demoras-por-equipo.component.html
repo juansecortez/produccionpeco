@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="component-container">
+  <div class="container">
+    <div class="row date-row">
+      <label>Fecha:</label>
+      <input type="date" [formControl]="fechaSeleccionada" />
+    </div>
+    <div class="row team-row">
+      <label>Equipo:</label>
+      <select [formControl]="equipoSeleccionado">
+        <option *ngFor="let equipo of equipos" [value]="equipo">
+          {{ equipo }}
+        </option>
+      </select>
+    </div>
+    <div class="row button-row">
+      <!-- Nuevo contenedor para selectores y botón -->
+      <a class="out-button" (click)="obtenerDemoras()"> Consultar Demoras </a>
+    </div>
+    <div class="row demoras-row">
+      <ul class="demoras-list">
+        <li *ngFor="let demora of demoras" class="demora-card">
+          {{ demora }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

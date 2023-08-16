@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.component-container {
+  min-height: 100vh;
+  background-image: url("https://i.ibb.co/JzRpg7z/peco.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px; /* Más espacio alrededor del contenedor */
+}
+.out-button {
+  display: inline-flex; /* Para centrar el texto verticalmente */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  background: transparent;
+  border: 3px solid white; /* Borde más grueso */
+  border-radius: 30px; /* Esquinas aún más redondeadas */
+  color: rgb(0, 0, 0);
+  font-size: 22px; /* Tamaño de fuente más grande */
+  padding: 10px 25px; /* Más relleno para un botón más grande */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+}
+
+.out-button:hover {
+  background-color: rgb(211, 53, 5);
+  color: white; /* Mantener el color del texto blanco en hover */
+  transform: translateY(
+    -4px
+  ); /* Desplazamiento hacia arriba más notorio al pasar el ratón */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más fuerte en hover */
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* Más espacio entre selectores y botón */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px; /* Esquinas redondeadas uniformes */
+  padding: 30px; /* Más relleno alrededor del contenedor */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Más espacio entre filas */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
+}
+
+.label-container {
+  flex-basis: 30%; /* Dar más espacio a la etiqueta */
+}
+
+.input-container {
+  flex-basis: 70%; /* Dar más espacio al control de entrada */
+}
+.date-row label,
+.team-row label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.demoras-row {
+  flex-direction: column;
+}
+
+.demoras-list {
+  list-style: none;
+  padding: 0;
+}
+
+.demora-card {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.demora-card:hover {
+  box-shadow: 0px 0px 10px rgba(211, 53, 5, 0.3);
+}
+
+.date-row input,
+.team-row select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px; /* Esquinas redondeadas uniformes */
+  border: 2px solid rgb(55, 94, 165);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+  outline: none;
+}
+
+.date-row input:focus,
+.team-row select:focus {
+  border-color: rgb(211, 53, 5);
+  box-shadow: 0px 0px 10px rgba(211, 53, 5, 0.3);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date-row label,
+  .team-row label {
+    margin-bottom: 5px;
+  }
+
+  .date-row input,
+  .team-row select {
+    width: 100%;
+  }
+}

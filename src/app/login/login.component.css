@@ -1,0 +1,170 @@
+body,
+html {
+  margin: 0;
+  overflow: hidden; /* Evita el desplazamiento */
+}
+
+.background {
+  background-image: url("https://www.pcolorada.com/wp-content/uploads/2021/03/img-planta-pcolorada.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed; /* Cambio a fijo para que el fondo no se mueva */
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  padding: 20px;
+  padding-right: 60px;
+  padding-left: 40px;
+  max-width: 380px;
+  background-color: rgba(128, 128, 128, 0.7); /* Gris transparente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 15px; /* Bordos redondeados */
+}
+
+.center-text {
+  text-align: center;
+  color: white; /* Cambio de color del texto */
+}
+
+.logo {
+  background-image: url("https://media.licdn.com/dms/image/C560BAQHQd8sPE2_bGg/company-logo_200_200/0/1610986871592?e=2147483647&v=beta&t=BZ9EjO0FLmEfVCuCCOgO1uH1_cgsB5_kMp_vopc9NUw");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+/* Estilos para los campos del formulario */
+label {
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease-in-out; /* Animación suave en el enfoque */
+}
+
+input:focus {
+  border-color: rgb(211, 53, 5); /* Ajusta este color según tu tema */
+}
+
+/* Wrapper para el campo de contraseña y el botón de ojo */
+.password-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px; /* Igual para ambos campos */
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho */
+}
+
+.password-wrapper .input-field {
+  padding-right: 40px; /* Espacio para el ícono del ojo */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Ajustar tamaño si es necesario */
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(211, 53, 5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 18px; /* Más grande */
+  font-weight: bold; /* Negrita */
+  text-align: center;
+  margin: 20px auto; /* Centrado */
+}
+
+.submit-button:hover {
+  background-color: rgb(55, 94, 165);
+}
+
+.center-text {
+  text-align: center;
+  color: white;
+  font-size: 24px; /* Más grande */
+  font-weight: bold; /* Negrita */
+}
+@media only screen and (max-width: 768px) {
+  .card {
+    max-width: 95%; /* Ampliamos el ancho máximo en pantallas pequeñas */
+    padding: 20px; /* Reducimos el padding */
+  }
+
+  .logo {
+    height: 140px; /* Reducimos el tamaño del logo */
+    width: 140px;
+  }
+
+  .input-field,
+  .password-wrapper .input-field {
+    padding: 8px; /* Reducimos el padding en los campos */
+  }
+
+  .submit-button {
+    padding: 10px; /* Reducimos el padding en el botón de enviar */
+    font-size: 16px; /* Reducimos el tamaño de la fuente en el botón */
+  }
+}
+
+/* Estilos para smartphones (por ejemplo, pantallas de menos de 480px de ancho) */
+@media only screen and (max-width: 480px) {
+  .card {
+    max-width: 100%; /* Ampliamos aún más el ancho máximo en pantallas muy pequeñas */
+    padding: 15px; /* Reducimos aún más el padding */
+  }
+
+  .logo {
+    height: 120px; /* Reducimos aún más el tamaño del logo */
+    width: 120px;
+  }
+
+  .input-field,
+  .password-wrapper .input-field {
+    padding: 6px; /* Reducimos aún más el padding en los campos */
+  }
+
+  .submit-button {
+    padding: 8px; /* Reducimos aún más el padding en el botón de enviar */
+    font-size: 14px; /* Reducimos aún más el tamaño de la fuente en el botón */
+  }
+}

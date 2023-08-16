@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<div class="background">
+  <div class="container">
+    <h1 class="title">Movimientos</h1>
+    <div class="statistics">
+      <!-- Movimiento de hoy -->
+      <div class="statistic">
+        <img
+          src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/p62sfl2zxwrltuhvvdbt"
+          alt="Logo"
+          class="logo"
+        />
+        <div class="data">
+          <h2>
+            Movimiento de hoy - <strong>{{ today }}</strong>
+          </h2>
+          <p>
+            Real: <strong>{{ movimientos?.MOVDIA }}</strong>
+          </p>
+          <p>
+            Planeado: <strong>{{ movimientos?.PLANDIA }}</strong>
+          </p>
+          <p>
+            Variación: <strong>{{ movimientos?.VARDIA }}</strong>
+          </p>
+        </div>
+      </div>
+      <!-- Movimiento de ayer -->
+      <div class="statistic">
+        <img
+          src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/p62sfl2zxwrltuhvvdbt"
+          alt="Logo"
+          class="logo"
+        />
+        <div class="data">
+          <h2>
+            Movimiento de ayer - <strong>{{ yesterday }}</strong>
+          </h2>
+          <p>
+            Real: <strong>{{ movimientos?.MOVDIAA }}</strong>
+          </p>
+          <p>
+            Planeado: <strong>{{ movimientos?.PLANDIAA }}</strong>
+          </p>
+          <p>
+            Variación: <strong>{{ movimientos?.VARDIAA }}</strong>
+          </p>
+        </div>
+      </div>
+      <!-- Movimiento mensual -->
+      <div class="statistic">
+        <img
+          src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/p62sfl2zxwrltuhvvdbt"
+          alt="Logo"
+          class="logo"
+        />
+        <div class="data">
+          <h2>
+            Movimiento mensual - <strong>{{ currentMonth }}</strong>
+          </h2>
+          <p>
+            Real: <strong>{{ movimientos?.MOVMENA }}</strong>
+          </p>
+          <p>
+            Planeado: <strong>{{ movimientos?.PLANMEN }}</strong>
+          </p>
+          <p>
+            Variación: <strong>{{ movimientos?.VARMEN }}</strong>
+          </p>
+        </div>
+      </div>
+      <!-- Movimiento anual -->
+      <div class="statistic">
+        <img
+          src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/p62sfl2zxwrltuhvvdbt"
+          alt="Logo"
+          class="logo"
+        />
+        <div class="data">
+          <h2>
+            Movimiento anual - <strong>{{ currentYear }}</strong>
+          </h2>
+          <p>
+            Real: <strong>{{ movimientos?.MOVANO }}</strong>
+          </p>
+          <p>
+            Planeado: <strong>{{ movimientos?.PLANANO }}</strong>
+          </p>
+          <p>
+            Variación: <strong>{{ movimientos?.VARANO }}</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
